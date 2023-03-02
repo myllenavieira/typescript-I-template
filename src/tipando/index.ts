@@ -1,4 +1,7 @@
-function buscarCarrosPorMarca(frota, marca) {
+import {frota} from './frota';
+import { Carro } from './types/types';
+
+function buscarCarrosPorMarca(frota: Carro[], marca?: string) : Array<Carro> {
   if (marca === undefined) {
     return frota
   }
@@ -9,3 +12,4 @@ function buscarCarrosPorMarca(frota, marca) {
     }
   )
 }
+console.log(buscarCarrosPorMarca(frota, 'Ford'));
